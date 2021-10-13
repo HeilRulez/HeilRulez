@@ -14,15 +14,20 @@ html, body {background: #fafafa; padding: 0; margin: 0; font-family: 'Open Sans 
 #top_menu ul li a:hover{background: #28c5e6; color: white}
 
 
-#middle {width: 960px; margin: 0 auto; min-height: 300px;}
+#middle {width: 960px; margin: 0 auto; min-height: 300px; padding: 20px 0;}
 #middle .left_side {float: left; width: 267px;}
-#middle .left_side .block h3 {background: #28c5e6; color: white; padding: 10px 10px 10px; text-align: center;}
+#middle .left_side .block h3 {background: #28c5e6; color: white; padding: 10px 10px 10px; text-align: center; margin: 0;}
 #middle .left_side .block ul {background: #f3f3f3; padding: 0; margin-top: 36px;}
 #middle .left_side .block ul  li{display: block; margin: 0;}
 #middle .left_side .block ul li a {display: block; color: #7e7e7e; text-decoration: none; padding: 10px 10px 10px;}
 #middle .left_side .block ul li a:hover {background: #28c5e6; color: white}
 
 #middle .main {margin-left: 296px;}
+#middle .main .quote {background: #28c5e6; color: white; padding: 30px;}
+#middle .main p {margin: 0;}
+#middle .main p.quote_text {font-style: italic; font-family: "Sans";}
+#middle .main p.quote_sign {font-style: italic; font-family: "Open Sans"; font-weight: bold; text-align: right; padding-top: 10px;}
+#middle .main .content {padding: 30px;}
 
 #footer {background: #757373; clear: both;}
 #footer .inner {width: 960px; margin: 0 auto; min-height: 100px;}
