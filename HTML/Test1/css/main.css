@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:300');
 html, body {background: #fafafa; padding: 0; margin: 0; font-family: 'Open Sans Condensed', sans-serif; font-size: 18px;}
+img {max-width: 100%;}
+.c {text-align: center;}
+.r {text-align: right;}
+.l {text-align: left;}
+
 #header {width: 960px; margin: 0 auto;}
 #header .logo {width: 500px; float: left;}
 #header .contacts {width: 250px; float: right; text-align: right; margin-top: 15px; margin-right: 20px;}
@@ -11,7 +16,7 @@ html, body {background: #fafafa; padding: 0; margin: 0; font-family: 'Open Sans 
 #top_menu ul {margin: 0 20px;}
 #top_menu ul li {display: inline-block;}
 #top_menu ul li a{display: inline-block; color: #7e7e7e; text-decoration: none; padding: 20px 35px 20px;}
-#top_menu ul li a:hover{background: #28c5e6; color: white}
+#top_menu ul li a:hover, #top_menu ul li a.active {background: #28c5e6; color: white}
 
 
 #middle {width: 960px; margin: 0 auto; min-height: 300px; padding: 20px 0;}
@@ -28,6 +33,18 @@ html, body {background: #fafafa; padding: 0; margin: 0; font-family: 'Open Sans 
 #middle .main p.quote_text {font-style: italic; font-family: "Sans";}
 #middle .main p.quote_sign {font-style: italic; font-family: "Open Sans"; font-weight: bold; text-align: right; padding-top: 10px;}
 #middle .main .content {padding: 30px;}
+#middle .main .content table {border-collapse: collapse;}
 
-#footer {background: #757373; clear: both;}
-#footer .inner {width: 960px; margin: 0 auto; min-height: 100px;}
+#middle .main .advantages {padding: 30px 0;}
+#middle .main .advantages h3 {background: #28c5e6; color: white; padding: 10px 30px 10px; margin: 0 0 25px;}
+#middle .main .advantages .adv {display: inline-block; width: 32.8%; text-align: center;}
+#middle .main .advantages .adv h4 {text-align: center; color: #28c5e6;}
+
+
+
+#footer {background: #757373; clear: both; color: white;}
+#footer .inner {width: 960px; margin: 0 auto; min-height: 100px; padding: 40px 30px;}
+#footer .inner .stroyteplo {width: 200px; float: left;}
+#footer .inner .unibix {width: 200px; float: right; text-align: right;}
+#footer .inner .unibix a {color: white;}
+#footer .inner .unibix a:hover {text-decoration: none; color: black;}
