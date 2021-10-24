@@ -9,3 +9,6 @@ Ctrl + Space     - Менюшка плагина со снипитами (Bootst
 Alt + Clic       - Добавляет ещё курсор
 
 Плагин HTML to CSS (Neptune Design) - По вызову через Ctrl+Shift+P (или Alt+X), создаёт в буфере css селекторы для вставки
+
+Создание алиасов в файле C:\Users\пользователь\.gitconfig . Принцып: [alias] s = status --short (при наборе в консоле git s выполнит написанное)
+
