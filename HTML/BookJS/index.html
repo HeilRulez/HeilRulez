@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript studi</title>
+</head>
+
+<body>
+    <div class='button'>Ckick!</div>
+    <div class='button_for'>For go</div>
+    <script>
+        let arr = ['red', 'blue', 'green', 'yellow', 'orenge'];
+        let button = document.querySelector ('.button');
+        let button_for = document.querySelector ('.button_for');
+
+        function swColor (color) {
+            let randColor = Math.floor(Math.random() * color.length);
+            let thisColor = color[randColor];
+            switch (thisColor) {
+                case ("green"):
+                    console.log('this green');
+                    break;
+                case ("blue"):
+                    console.log('this blue');
+                    break;
+                case ("red"):
+                    console.log('this red');
+                    break;
+                default:
+                    console.log('0');
+                    break;
+            }
+        }
+
+        function for_go () {
+            console.log ('Opp!');
+            for ( let i=0; i<10; i++) {
+                document.writeln ('color');
+            }
+        }
+        button.addEventListener ('click', function () {swColor(arr)});
+        button_for.addEventListener ('click', function () {for_go()});
+    </script>
+</body>
+
+</html>
