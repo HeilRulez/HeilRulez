@@ -32,15 +32,29 @@
                     break;
             }
         }
-
+        
         function for_go () {
             console.log ('Opp!');
             for ( let i=0; i<10; i++) {
-                document.writeln ('color');
+                if (i == 3) {
+                    document.write('opss');
+                    continue;
+                }
+                document.writeln (i);
             }
         }
+        
+
         button.addEventListener ('click', function () {swColor(arr)});
         button_for.addEventListener ('click', function () {for_go()});
+
+        /*
+        let count = 0;
+        do {
+            document.writeln("slfksjfl");
+            count++;
+        }while (count < 10);
+        */
     </script>
 </body>
 
