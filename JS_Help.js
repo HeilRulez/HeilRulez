@@ -14,3 +14,24 @@ let intervalID = setInterval(showAlert, 2000);   //  работает цикло
 clearInterval (intervalID);   // остановка интервала
 
 //////////////////////////
+
+function stopWatch() {          //Показывает время выполнения кода
+    let startTime = Date.now();     //фиксация времени запуска
+
+    function getDelay() {
+        let elapsedTime = Date.now() - startTime;   // расчёт разницы от первого запуска, для дальнейшего вычисления
+        alert(elapsedTime + ' миллисек.');
+    }
+
+    return getDelay;  // возвращает прошедшее время
+}
+let timer = stopWatch();       // Запуск
+timer();                    // Получение результата
+
+//////////////////////////
+
+//Варианты для консоли
+
+console.log("This is text");
+console.warn("This is a warning!");
+console.error("This is an error!");

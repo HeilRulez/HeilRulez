@@ -7,6 +7,45 @@
 </head>
 
 <body>
+    <script>
+        function stopWatch() {          //Показывает время выполнения кода
+            let startTime = Date.now();     //фиксация времени запуска. После работы функции она исчезает. 
+                                            //Переенная остаётся в "замыкании" с использующей её функцией getDeley.
+
+            function getDelay() {
+                let elapsedTime = Date.now() - startTime;   // расчёт разницы от первого запуска, для дальнейшего вычисления
+                alert(elapsedTime + ' миллисек.');
+            }
+
+            return getDelay;  // возвращает прошедшее время
+        }
+
+        let timer = stopWatch();
+
+        for (let i = 0; i < 1000000; i++) {     //какой-то любой процесс, для которого считаем время выполнения
+            let foo = Math.random() * 10000;
+        }
+
+        timer();  //вызываем возвращаемую фунуцию
+    </script>
+
+
+    <!--
+    <script>
+        function youSayGoodBye() {   //содержит и возвращает функцию
+            alert("Good Bye!");
+
+            function andISayHello() {
+                alert("Hello!");
+            }
+            return andISayHello;
+        }
+        let you = youSayGoodBye();  //сначала идёт вызов родительской функции, после, переменная ссылается на возвращяемую функцию
+        you();
+    </script>
+-->
+
+    <!--
     <div class='button'>Ckick!</div>
     <div class='button_for'>For go</div>
     <script>
@@ -45,17 +84,21 @@
         }
         
 
-        button.addEventListener ('click', function () {swColor(arr)});
-        button_for.addEventListener ('click', function () {for_go()});
+        button.addEventListener ('click', function () {swColor(arr)});  // слушатель клика, <div class='button'>Ckick!</div> => let button = document.querySelector ('.button') =>
+        button_for.addEventListener ('click', function () {for_go()});   
 
-        /*
-        let count = 0;
+-->
+
+    <!--   Пример цикла do-while. Сначала выполнение, потом проверка.
+        let count = 0; 
         do {
             document.writeln("slfksjfl");
             count++;
         }while (count < 10);
-        */
+-->
     </script>
+
+
 </body>
 
 </html>
