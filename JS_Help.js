@@ -35,3 +35,14 @@ timer();                    // Получение результата
 console.log("This is text");
 console.warn("This is a warning!");
 console.error("This is an error!");
+
+
+///////////////////////////
+
+// Сложение значений из массива, не используя цикл
+
+const euros = [23, 23.5, 63.32, 45];
+const sum = euros.reduce((total, amount) => total + amount);    
+// аналогично - const sum = euros.reduce(function(total, amount) {return total + amount;}, 0);    0 - это начальное значение
+//total содержит итоговое значение, полученное в результате всех произведенных на этот момент действий; 
+//amount — это текущий элемент массива. 

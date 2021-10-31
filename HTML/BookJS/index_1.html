@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Console Stuff</title>
+    <title>Console Stuff</title>   
 
     <style>
         #container {
@@ -31,13 +31,15 @@
 
     <script>
 
+            // Пример вывода в консоль. В хроме ctr + shift + I - открыть консоль
+
         let myButton = document.querySelector("#myButton");
         myButton.addEventListener("click", doSomething, false);
 
         function doSomething(e) {
-            console.log("We ckicked on: " + e.target.id);
-            console.warn("This is a warning!");
-            console.error("This is an error!");
+            console.log("We ckicked on: " + e.target.id);  // простое сообщение
+            console.warn("This is a warning!");     // предупредительное
+            console.error("This is an error!");     // типа ошибка
         }
     </script>
 </body>
