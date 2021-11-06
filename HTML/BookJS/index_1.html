@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Console Stuff</title>   
+
+    <style>
+        #container {
+            padding: 50px;
+        }
+
+        #myButton {
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: lighter;
+            background-color: #FFF;
+            border: 3px #333 solid;
+            padding: 15px;
+        }
+
+        #myButton:hover {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button id="myButton">click me</button>
+    </div>
+
+    <script>
+
+            // Пример вывода в консоль. В хроме ctr + shift + I - открыть консоль
+
+        let myButton = document.querySelector("#myButton");
+        myButton.addEventListener("click", doSomething, false);
+
+        function doSomething(e) {
+            console.log("We ckicked on: " + e.target.id);  // простое сообщение
+            console.warn("This is a warning!");     // предупредительное
+            console.error("This is an error!");     // типа ошибка
+        }
+    </script>
+</body>
+
+</html>

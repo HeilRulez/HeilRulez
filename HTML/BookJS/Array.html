@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Array example</title>
+    </head>
+
+    <body>
+        Hello
+        <input id='message' /> <!--Поле ввода-->
+
+        <script>
+            
+            setInterval(function(){     // по таймеру выводит окно с текстом введённым в поле
+                let messageInput = document.getElementById('message');
+                alert(messageInput.value);
+            }, 5000);
+            
+            //
+
+            let groceries = ["Milk", "Eggy", "Frosted Flakey", "Salami", "Juice"];
+
+            /*
+
+            groceries.push("Cookies");    // добавление в конец массива
+            groceries.unshift("Bananas"); // добавление в начало массива
+            let lastItem = groceries.pop(); // удаляет последний элемент и возвращает его значение
+            let firstItem = groceries.shift(); // удаляет первый элемент и возвращает его значение
+
+            console.log(groceries.shift()) // при добавлении вернёт кол-во элементов, при удалении - сам элемент
+            
+            */
+
+            function capitalizeItUp(item) {
+                let firstLatter = item.charAt(0).toLowerCase();     // приведение первой буквы элемента массива к нижнему регистру
+                return firstLatter + item.slice(1);
+            }
+
+            let newNames = groceries.map(capitalizeItUp);
+            console.log(newNames);
+            console.log(groceries);
+
+            //
+
+            let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+            let cvenNumber = numbers.filter(function (item) {    // фильтрация чётных чисел
+                return (item % 2 == 0);
+            });
+            console.log(cvenNumber);
+
+            //
+
+            let total = numbers.reduce(function(total, current) {       // сложение элементов массива
+                                                                        //первый содержит итоговое значение, полученное в результате всех  
+                                                                        //произведенных на этот момент действий; второй — это текущий элемент массива. 
+                return total + current;
+            }, 0);
+            console.log(total);     // 0 - это начальное значение
+        </script>
+    </body>
+</html>

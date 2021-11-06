@@ -1,18 +1,105 @@
-<!DOCTPE html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <mata charset="utf-8"></mata>
-        <title>Say Hello!</title>
-        <style>
 
-        </style>
-    </head>
-    <body>
-        <script>
-            function getDistance(speed, time) {
-                let distance = speed * time;
-                return distance;
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript studi</title>
+</head>
+
+<body>
+    <script>
+        function stopWatch() {          //Показывает время выполнения кода
+            let startTime = Date.now();     //фиксация времени запуска. После работы функции она исчезает. 
+                                            //Переенная остаётся в "замыкании" с использующей её функцией getDeley.
+
+            function getDelay() {
+                let elapsedTime = Date.now() - startTime;   // расчёт разницы от первого запуска, для дальнейшего вычисления
+                alert(elapsedTime + ' миллисек.');
             }
-        </script>
-    </body>
+
+            return getDelay;  // возвращает прошедшее время
+        }
+
+        let timer = stopWatch();
+
+        for (let i = 0; i < 1000000; i++) {     //какой-то любой процесс, для которого считаем время выполнения
+            let foo = Math.random() * 10000;
+        }
+
+        timer();  //вызываем возвращаемую фунуцию
+    </script>
+
+
+    <!--
+    <script>
+        function youSayGoodBye() {   //содержит и возвращает функцию
+            alert("Good Bye!");
+
+            function andISayHello() {
+                alert("Hello!");
+            }
+            return andISayHello;
+        }
+        let you = youSayGoodBye();  //сначала идёт вызов родительской функции, после, переменная ссылается на возвращяемую функцию
+        you();
+    </script>
+-->
+
+    <!--
+    <div class='button'>Ckick!</div>
+    <div class='button_for'>For go</div>
+    <script>
+        let arr = ['red', 'blue', 'green', 'yellow', 'orenge'];
+        let button = document.querySelector ('.button');
+        let button_for = document.querySelector ('.button_for');
+
+        function swColor (color) {
+            let randColor = Math.floor(Math.random() * color.length);
+            let thisColor = color[randColor];
+            switch (thisColor) {
+                case ("green"):
+                    console.log('this green');
+                    break;
+                case ("blue"):
+                    console.log('this blue');
+                    break;
+                case ("red"):
+                    console.log('this red');
+                    break;
+                default:
+                    console.log('0');
+                    break;
+            }
+        }
+        
+        function for_go () {
+            console.log ('Opp!');
+            for ( let i=0; i<10; i++) {
+                if (i == 3) {
+                    document.write('opss');
+                    continue;
+                }
+                document.writeln (i);
+            }
+        }
+        
+
+        button.addEventListener ('click', function () {swColor(arr)});  // слушатель клика, <div class='button'>Ckick!</div> => let button = document.querySelector ('.button') =>
+        button_for.addEventListener ('click', function () {for_go()});   
+
+-->
+
+    <!--   Пример цикла do-while. Сначала выполнение, потом проверка.
+        let count = 0; 
+        do {
+            document.writeln("slfksjfl");
+            count++;
+        }while (count < 10);
+-->
+    </script>
+
+
+</body>
+
+>>>>>>> 650e78bb661f1e7c813b2b41f52cfe50f4dd39ce
 </html>
