@@ -1,65 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="main.css" />
+    <title>DocSite</title>
 </head>
 
-<body>
-
-    <div>
-        <p>Плачь, <b>Венера, и <u>вы,</b> Утехи, пла</u>чьте!<br />
-           Плачьте <u>все, <s>кто имеет в сердце</s> нежность!</u><br />
-           Бедный птенчик погиб моей подружки,<br />
-           <s>Бедный птенчик, любовь</s> моей подружки.</p>
-        <p>HCl + CaCO<sub>3</sub> = CaCl<sub>2</sub> + CO<sup>2</sup> + H<sup>2</sup>O</p>
+<body id="bigBoss">
+    <div id="boss">
+        <h1 id="bigMessage" class="highlight summer">What's happening?</h1>
+        <h1 id="bigMessage_2" class="highlight summer">What's happening?</h1>
     </div>
-
-    <div>
-        <table border="2">
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td rowspan="2">2</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td colspan="2">7</td>
-                    
-                    <td>9</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-    <script>
-        function filteredArray(arr, elem) {
-            let newArr = [];
-            // change code below this line
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i].indexOf(elem) == -1) {
-                    newArr.push(arr[i]);
-                }
-                    
-                
-            }
-            // change code above this line
-            return newArr;
-        }
-
-        // change code here to test different cases:
-        console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
-
-    </script>
+    <div></div>
+    <p></p>
 </body>
+
+
+<script>
+    console.clear();
+
+    function theDOMElementWalker(node) {
+        if (node.nodeType == Node.ELEMENT_NODE) {
+            console.log(node.tagName);
+            node = node.firstChild;
+
+            while (node) {
+                theDOMElementWalker(node);
+                node = node.nextSibling;
+            };
+        };
+    };
+    let selected = document.querySelector("#bigBoss");
+    theDOMElementWalker(selected);
+
+</script>
 
 </html>
