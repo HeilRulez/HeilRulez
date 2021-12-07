@@ -139,4 +139,30 @@ let clon = element.cloneNode(true); // true - нужноли клонирова�
 parentElement.appendChild(clon); // добавили потомка
 
 
-//проверка
+//Родитель эдемента по селектору
+
+let element = document.querySelector("h1");
+let parent = element.closest(".par")    //родитель с атрибутом class="par"
+
+//_______________________________________________________________________________
+
+// События
+
+document.addEventListener('click', changeColor, false); // событие, функция, (true/false - погружение/высплытие)
+
+document.removeEvetnListener('click', changeColor, false); // удаление слушателя
+
+// События мыши
+
+click
+dblclick
+mouseover
+mouseout
+mouseenter
+mouseleave
+mousedown
+mouseup
+mousemove
+contextmenu
+mousewheel
+DOMMouseScroll

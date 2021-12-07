@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheets" href="main.css" />
+        <title>My form</title>
+    </head>
+
+    <body>
+        <div>
+            <form>
+                <h3>My form</h3>
+
+                <p>You name</p>
+                <p><input type="text" value="Sergi" name="username" readonly="readonly" /></p> <!-- readonly можно только считать -->
+                <p><input type="password" name="password" /> <span>password</span></p>
+                <p><input type="checkbox" /> <span>checkbox</span></p>
+                <div>
+                    <p>
+                        <label>
+                        <input type="radio" name="age" value="0" />
+                        <span>0 - 18</span>
+                        </label>
+                    </p>
+                    <p>
+                        <input type="radio" name="age" value="19" checked id="age-19" />
+                        <label for="age-19">19 - 55</label>
+                    </p>
+                    <p><input type="radio" name="age" value="56" /> <span>55+</span></p>
+                </div>
+                <p><input type="file" /> <span>file</span></p>
+                <p><input type="button" disabled value="Click me" /> <span>button</span></p> <!--disabled - не активно-->
+                <p><input type="datetime" /> <span>datetime</span></p>
+                <p><input type="range" /> <span>range</span></p>
+                <p><input type="number" name="age" value="3" /> <span>number</span></p>
+                <p><input type="email" name="email"autocomplete="off" required="required" placeholder="Enter your email" /> <span>email</span></p>
+                <!--autocomplete - варианты автозаполнения, required - обязательное поле-->
+                <div>
+                    <select name="coutry" multiple> <!--multiple - выбор нескольких-->
+                        <option value="ru">Russian</option>
+                        <option value="us" selected>USA</option> <!--по умолчанию-->
+                        <option value="hu">Hungary</option>
+                        <option value="sa">Southern Africa</option>
+                    </select>
+                </div>
+                <div>
+                    <textarea>This text</textarea>
+                </br>
+                    <button type="button">Click <strong>ME</strong></button>
+                </div>
+                <p><input type="submit" /> <span>submit</span></p>
+            </form>
+        </div>
+    </body>
+</html>
