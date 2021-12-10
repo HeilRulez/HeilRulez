@@ -152,6 +152,8 @@ document.addEventListener('click', changeColor, false); // событие, фу�
 
 document.removeEvetnListener('click', changeColor, false); // удаление слушателя
 
+event.stopPropagation();    // остановка распространения события
+
 // События мыши
 
 click
@@ -166,3 +168,119 @@ mousemove
 contextmenu
 mousewheel
 DOMMouseScroll
+
+
+// Колёсико
+
+document.addEventListener('mousewheel', mouseWheel, false);     // события колеса для IE и Chrome
+document.addEventListener('DOMMouseScroll', mouseWheel, false); // события колеса для Firefox
+
+//mousewheel.wheelDelta значение. Вверх +1, вниз -1
+//DOMMouseScroll.detail значение. Вверх -1, вниз +1
+
+// Простой подход унифицировать события колёсика
+
+function example(e) {
+    let scrollDirection; //хранит значение wheelDelta или detail
+    let wheelData = e.wheelDelta;
+
+    if (wheelData) {                    //если свойство есть
+        scrollDirection = wheelData;    //записали положение
+    }else {
+        scrollDirection = -1 * e.deteil;    // или переделали свойство firefox на противоположный знак
+    };
+    if (scrollDirection > 0) {
+        console.log("Scrolling up! " + scrollDirection);
+    }else {
+        console.log("Scrolling down! " + scrollDirection);
+    };
+};
+
+
+// События клавиш
+
+keydown
+keypress  // сработает только если клавиша отображает знак
+keyup
+
+window.addEventListener('keydown', fun, false);
+
+// Свойства события Keyboard
+
+KeyCode
+CharCode // только у keypress содержит ASCII код
+ctrKey, altKey, shiftKey // возвращает булево
+MetaKey // булево для клавиши win/Command
+
+// Example
+function checkKeyPressed(e) {
+    if (e.keyCode == 65) {
+        console.log();
+    };
+};
+
+// Example
+function moveSomething(e) {
+    switch (e.keyCode) {
+        case 37:    // влево
+            break;
+        case 38:    // вверх
+            break;
+        case 39:    // вправо
+            break;
+        case 40:    // вниз
+            break;
+    };
+};
+
+// Example
+let keys = []; // проверка комбинаций
+
+function keysPressed(e) {
+    keys[e.keyCode] = true; // сохраняет по индексу каждую клавишу в архив
+
+    // Ctrl + Shift + 5
+    if (keys[17] && keys[16] && keys[53]) {
+        console.log();
+    };
+
+    // Ctrl + f
+    if (keys[17] && keys[70]) {
+        console.log();
+        e.preventDefault(); // во вызовит поиск в браузере
+    };
+};
+function keysReleased(e) {
+    // отметит отпущеные клавиши
+    keys[e.keyCode] = false;
+};
+
+//_______________________________________________________________________________
+
+async   // атрибут <script async.. асинхронная загрузка скрипта. Хз в какой последовательности выполнятся.
+
+defer   // запустится после всей загрузки, перед событием DOMContentLoaded. В отсичии от async
+
+// События загрузки страницы
+
+document.addEventListener('DOMContentLoaded', fun, false); // слушать в document
+// Сработает когда будет загружена сырая разметка, без картинок и стелей.
+// Достаточно для работы с DOM
+
+window.addEventListener('load', fun, false);   // слушать в window
+// Сработает когда случится полная загрузка документа
+
+
+// Один обработчик на группу
+
+// При прослушки события на элементе, оно прокатывается по всему дереву его потомков, срабатывая для каждого.
+let theParent = document.quwrySelector('#thisParent'); // находим родителя группы элементов
+theParent.addEventListener('click', doSomething, false);
+
+function doSomething(e) {
+    if (e.target != e.currentTarget) {  // target - целевой элемент, currentTarget - к кому прикреплён слушатель
+        let clickedItem = e.target.id;  // конкретный элемент-ребёнок
+        console.log("Click elem.");
+    };
+    e.stopPropagation(); // останавливаем распростронение события дальше по дереву
+};
