@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta carset="UTF-8">
+        <link rel="stylesheets" href="main.css">
+        <title>My Site</title>
+        <style src="main.js"></style>
+    </head>
+
+    <body>
+        <div class="register-form">
+            <h2>Register here</h2>
+            <form>
+                <p>
+                    <label>
+                        <span>Firsr name</span>
+                        <input type="text" name="firstname" required autocomplete="off" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span>Last name</span>
+                        <input type="text" name="lastname" required autocomplete="off" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span>Date of birth</span>
+                        <input type="date" name="birth-date" autocomplete="off" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span>E-mail</span>
+                        <input type="email" name="e-mail" autocomplete="off" required />
+                    </label>
+                </p>
+                <div>
+                    <p>About you</p>
+                    <textarea required cols="80" row="6" name="about"></textarea>
+                </div>
+
+                <div>
+                    <h5>Age</h5>
+                    <p>
+                        <label>
+                            <input type="radio" name="age" value="0" />
+                            <span>0 - 18</span>
+                        </label>
+                    </p>
+                    <p>
+                        <input type="radio" name="age" value="19" checked id="age-19" />
+                        <label for="age-19">19 - 55</label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="age" value="56" />
+                            <span>55+</span>
+                        </label>
+                    </p>
+                </div>
+
+                <div>
+                    <p>Coutry of living</p>
+                    <select name="country" multiple>
+                        <option value="ru">Russia</option>
+                        <option value="us">USA</option>
+                        <option value="hu" selected>Hungary</option>
+                        <option value="sa">Southern Africa</option>
+                    </select>
+                </div>
+
+                <p>
+                    <label>
+                        <input type="checkbox" required name="user-agreement" />
+                        <span>agree with user agreement.</span>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        <input type="checkbox" required name="terms" />
+                        <span>agree with <a href="#">terms of use.</a></span>
+                    </label>
+                </p>
+
+                <p>
+                    <input type="submit" value="Register" />
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
