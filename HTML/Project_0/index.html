@@ -13,12 +13,16 @@
 </body>
 <script src="main.js"></script>
 <script>
-    for (let i = 0; i < 5; i++){
+    let i = 5;
+
+    while (i){
         let el_p = createElem('p');
         el_p.id = i;
         el_p.textContent = "Hello, JS!" + el_p.id;
+        i--;
     };
-    alert("I love JS!");
+    
+
 </script>
 
 </html>
