@@ -23,17 +23,10 @@ function createElem(element) {
 // alert(arr);
 
 
-const number = +prompt('Введите число между 0 и 3', '');
+let ask = (question, yes, no) =>
+    confirm(question) ? yes() : no();
 
-switch (number) {
-    case 0:
-        alert('Вы ввели 0');
-        break;
-    case 1:
-        alert('Вы ввели 1');
-        break;
-    case 2:
-    case 3:
-        alert('Вы ввели 2, а может 3');
-        break;
-};
+ask("Вы согластны?",
+    () => alert("Вы согласились."),
+    () => alert("Вы отменили выполнение.")
+    );
