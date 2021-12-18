@@ -23,14 +23,3 @@ function createElem(element) {
 // alert(arr);
 
 
-function pow(x, n) {
-    return n % 1 == 0 ? x**n : alert("Ошибка");
-};
-
-let x = prompt("Введите число", 0);
-let n;
-do {
-    n = prompt("Введите второе целое число", 1);
-}while(!(n >= 1 && n % 1 == 0));
-
-alert(`Результат: ${pow(x, n)}`);
