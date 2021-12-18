@@ -23,17 +23,14 @@ function createElem(element) {
 // alert(arr);
 
 
-const number = +prompt('Введите число между 0 и 3', '');
-
-switch (number) {
-    case 0:
-        alert('Вы ввели 0');
-        break;
-    case 1:
-        alert('Вы ввели 1');
-        break;
-    case 2:
-    case 3:
-        alert('Вы ввели 2, а может 3');
-        break;
+function pow(x, n) {
+    return n % 1 == 0 ? x**n : alert("Ошибка");
 };
+
+let x = prompt("Введите число", 0);
+let n;
+do {
+    n = prompt("Введите второе целое число", 1);
+}while(!(n >= 1 && n % 1 == 0));
+
+alert(`Результат: ${pow(x, n)}`);
