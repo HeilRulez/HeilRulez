@@ -381,4 +381,3 @@ welcome();
 
 debugger;   // создаст точку останова при отладке
 
-https://developer.chrome.com/docs/devtools/

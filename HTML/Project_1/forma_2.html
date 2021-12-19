@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>My site</title>
+</head>
+<body>
+    <div>
+        <h2>Register form</h2>
+        <form>
+            <div>
+                <p>
+                    <input type="text" name="name" placeholder="Name" autocomplete="off" required />
+                </p>
+                <p>
+                    <input type="text" name="first_name" placeholder="First name" autocomplete="off" required />
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <span>Date birthday:</span>
+                    <input type="date" name="birthday" min="1970-01-01" max="1995-12-31" required />
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="floor" value="man" required />
+                        <span>Man</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="floor" value="wman" required />
+                        <span>Woman</span>
+                    </label>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <p>Experience:</p>
+                    <textarea name="skill" required cols="60"></textarea>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" checked disabled />
+                        <span>I have a car</span>
+                    </label>
+                </p>
+            </div>
+
+            <div>
+                <span>I speak:</span>
+                <lu style="list-style-type: none">
+                    <li style="margin: 0 0 0 10px">
+                        <label>
+                            <input type="checkbox" name="ru" />
+                            <span>Russian</span>
+                        </label>
+                    </li>
+                    <li style="margin: 0 0 0 10px">
+                        <label>
+                            <input type="checkbox" nama="en" />
+                            <spen>English</spen>
+                        </label>
+                    </li>
+                    <li style="margin: 0 0 0 10px">
+                        <label>
+                            <input type="checkbox" name="gr" />
+                            <span>Deutsch</span>
+                        </label>
+                    </li>
+                    <li style="margin: 0 0 0 10px">
+                        <label>
+                            <input type="checkbox" name="other" />
+                            <span>Other</span>
+                        </label>
+                    </li>
+                </lu>
+            </div>
+
+            <div>
+                <p>
+                    <span>E-mail:</span>
+                    <input type="email" name="email" autocomplete="off" required />
+                </p>
+                <p>
+                    <input type="submit" value="Send" />
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

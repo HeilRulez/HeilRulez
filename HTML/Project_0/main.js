@@ -23,10 +23,3 @@ function createElem(element) {
 // alert(arr);
 
 
-let ask = (question, yes, no) =>
-    confirm(question) ? yes() : no();
-
-ask("Вы согластны?",
-    () => alert("Вы согласились."),
-    () => alert("Вы отменили выполнение.")
-    );
