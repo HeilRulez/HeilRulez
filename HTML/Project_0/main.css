@@ -1,44 +1,63 @@
-.green {
-    color: green;
-}
-.red {
-    color: red;
-}
-.yellow {
-    color: yellow;
-}
-.blue {
-    color: lightblue;
+.text {
+  text-align: center;
+  color: #000;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
 }
 
-.text {
-    text-align: center;
-    color: #000;
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-}
 .size_s {
-    font-size: 1em;
+  font-size: 1em;
 }
+
 .size_m {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
+
 .size_l {
-    font-size: 2em;
+  font-size: 2em;
 }
+
 .size_xl {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
+
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 .strike {
-    text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+/* .inl_bl {
+    display: inline-block;
+    vertical-align: top;
+} */
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.blue {
+  color: lightblue;
+}
+
+.black {
+  color: black;
 }
