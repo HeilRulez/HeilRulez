@@ -1,0 +1,25 @@
+/* Текст */
+
+* {
+    color: #fff;
+    text-align: left, right, center;
+    text-decoration: underline, none;
+    text-transform: uppercase, lowercase;
+}
+
+/* Шртфты */
+
+* {
+    font-family: Arial, Helvetica, sans-serif,serif,monospace,cursive,fantasy;
+    font-size: 16px;
+    font-weight: bold, normal, lighter;
+}
+
+/* Фон */
+
+* {
+    background-color: white;
+    background-image: url();
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}

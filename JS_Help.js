@@ -16,6 +16,9 @@ let result = prompt("title", "default"); //как alert с текстовым п
 let result = confirm("Тут например вопрос?");
 // Вернёт true или false, что нажато - ok или отмена
 
+
+debugger;   // создаст точку останова при отладке
+
 //_______________________________________________________________________________
 
 let intervalID = setInterval(showAlert, 2000);   //  работает циклом. (запускаемая функция, 2 сек)
@@ -379,5 +382,41 @@ welcome();
 
 //_______________________________________________________________________________
 
-debugger;   // создаст точку останова при отладке
+// Копирование Object
 
+
+//Example_1
+
+let user = {
+    name: "Ivan",
+    age: 30,
+};
+
+let clone = {};
+
+for (let key in user) {
+    clone[key] = user[key];
+};
+
+
+// Example_2
+
+let user = { name: "Ivan"};
+
+let perm_1 = { canView: true};
+let perm_2 = { canEdit: true};
+
+Object.assign(user, perm_1, perm_2);
+// user теперь равно {name: "Ivan", canView: true, canEdit: true}
+
+let user = {
+    name: "Ivan",
+    age: 30,
+};
+
+let clone = Object.assign({}, user);
+
+
+// Example_3    Глубокое копирование
+// Библиотека lodash
+//  Метод _.cloneDeep(obj)
