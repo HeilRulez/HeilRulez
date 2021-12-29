@@ -1,3 +1,41 @@
-<link rel="icon" href="./ico.png" /> <!--   И так работает ХЗ -->
-   <!-- <link rel="stylesheet icon" href="./ico.png" type="image/png" />  С PNG-->
-    <!-- <link rel="shortcut icon" href="./icon.ico" /> -->
+<link rel="icon" href="./ico.png"> <!--   И так работает ХЗ -->
+   <!-- <link rel="stylesheet icon" href="./ico.png" type="image/png">  С PNG-->
+    <!-- <link rel="shortcut icon" href="./icon.ico">    ВЕРНЫЙ ВАРИАНТ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Для указания устройства для браузера. name-значения метатега, 
+      content-инструкция браузеру. width...-инструкция занимать всю ширину экрана.
+      initial...-что на всех экранах маштаб 1:1, без маштабирования. -->
+
+<meta name="description" content="Тут описание контента страницы">   <!-- для поисковиков важно -->
+
+<meta name="keywords" content="чтото"> <!-- Ключевые слова о сайте. Тоже для поисковиков -->
+
+<meta name="author" content="C.C."> <!-- Авторы. Каждый тег- один автор. Для поисковиков -->
+
+<!--_______________________________________________________-->
+
+
+<header></header> <!-- Шапка -->
+<nav></nav> <!-- Меню -->
+<main></main>  <!-- Основной контент -->
+<section></section>  <!-- Смысловой блок -->
+<footer></footer> <!-- Подвал -->
+
+<article>      <!-- Обрамление статьи для симантики -->
+   <h2></h2>
+   <p></p>
+</article>
+
+<blockquote cite="#"></blockquote>  <!-- Блок цитаты -->
+
+<table>     <!-- Таблица -->
+   <tr>
+      <th></th>      <!-- Первая строка (tr) с тегами ячеек th, для заголовков -->
+   </tr>
+   <tr>           <!-- Строка -->
+      <td></td>      <!-- Ячейка -->
+      <td colspan="3">Займёт 3 столбца</td>
+   </tr>
+   <tr rowspan="3">Займёт 3 ячейки</tr>
+</table>
