@@ -1,10 +1,13 @@
 /* Текст */
 
 * {
-    color: #fff;
-    text-align: left, right, center;
-    text-decoration: underline, none;
-    text-transform: uppercase, lowercase;
+    color: #fff;               /* Цвет текста */
+    text-indent: 2px;                   /* Величина красной строки */
+    text-align: left, right, center;        /* Выравнивание текста внутри элем. */
+    text-decoration: underline, none, inherit;   /* Декоративная линия текста. Много вариантов */
+    text-transform: uppercase, lowercase;     /* Написание букв в тексте */
+    word-break: normal;              /* Правила переноса слова. Что то было ещё word-wrap. */
+    letter-spacing: -1;     /* Расстояние между буквами */
 }
 
 /* Шртфты */
@@ -12,7 +15,9 @@
 * {
     font-family: Arial, Helvetica, sans-serif,serif,monospace,cursive,fantasy;
     font-size: 16px;
-    font-weight: bold, normal, lighter;
+    font-weight: bold, normal, lighter;     /* Толшина букв. 100 ~ 900 кратностью 100. */
+    font-style: italic;     
+    line-height: 2px;       /* Высота линии текста */
 }
 
 /* Фон */
@@ -23,6 +28,14 @@
     background-size: contain, cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/* Визуализация */
+
+* {
+    opacity: .2;          /* Прозраченость элем. */
+    visibility: visible;        /* Скрыть элемент, оставляя в потоке */
+    box-sizing: border-box;     /* padding и border не увеличит блок, останется его фиксированый размер */
 }
 
 /* Для контейнера flex */
@@ -89,3 +102,30 @@ img[src="logo.png"] {border: 1px;}  /* селект по атрибуту */
 
 .title::before {content: "чтоо";}    /* Добавит (не не будет частью элем) перед <h1 class="title">здесь</h1> */
 .title::after {content: "чтото";}    /* Добавит после. Оба всегда содержат свойство content */
+
+
+/* Позицтонирование */
+
+* {
+    position: static;       /* Стандартное поведение */
+    /**/
+    position: relative;     /* Смещение относотельно себя. Остаётся в потоке */
+    top: 20px;
+    right: 40px;
+    bottom: 10px;
+    left: 10px;
+    /**/
+    position: fixed;        /* Положение относительно угла окна. Не в потоке */
+    top: 10px;
+    left: 10px;
+    /**/
+    position: absolute;     /* Не в потоке. не стоит на месте при прокрутке как  fixed. 
+                               Если родитель static, то ещеп прородителя с позиционируется от него.
+                               Окончательно от body. Если родитель позиционирован (не static) - то
+                               относительно его угла. */
+    /**/
+    position: sticky;       /* Работает со скролом. Гибридное пощиционирование. В потоке и нет. */
+    /**/
+    z-index: 0;         /* По умолчанию "0". Определяет кто на первый план. Кто больше тот и веден.
+                            Для элем со static работает только если у родителя контейнер (flex или grid) */
+}

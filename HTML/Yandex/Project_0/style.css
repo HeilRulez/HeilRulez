@@ -139,14 +139,14 @@
   flex-wrap: wrap;
 }
 
-.flex-row_space_bottom {
-  margin-bottom: 60px;
-}
-
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.flex-row_space_bottom {
+  margin-bottom: 60px;
 }
 
 .flex-column {
