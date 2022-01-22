@@ -94,6 +94,8 @@
     align-items: stretch, flex-start, flex-end, center, baseline;   /* выравнивание элем. по линии */
     align-content: flex-start, flex-end, center,
                     space-between, space-around, stretch;    /* работает только с flex-wrap: wrap. Где будет перенесённый элем. */
+    place-items: start center;      /* объединяет в себе align-items и justify-items  */
+    place-content: space-around space-between       /* объединяет в себе align-content и justify-content */
 }
 
 /* Для элемента flex */
