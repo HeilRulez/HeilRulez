@@ -95,4 +95,42 @@
 
 <!-- _____________ Картинки ________________-->
 
-<img src="https://" alt="">      <!-- простая вставка -->
+<img src="https://" width="" height="" alt="">      <!-- простая вставка -->
+
+<picture>
+   <source media="(min-width: 1024px)" srcset="https://">      <!-- меняется динамически -->
+   <source media="(min-width: 768px)" srcset="https://">
+   <source media="(min-width: 360px)" srcset="https://">
+   <img src="https://" alt="">
+</picture>
+
+<figure>
+   <img src="https://" width="" height="" alt="">
+   <figcaption>Тут описание картинки</figcaption>
+</figure>
+<!--______________ Ещё тэги __________________-->
+
+<abbr title="HyperText Markup Language">HTML</abbr>  <!-- Абривиатура -->
+
+
+<input list="list">
+<datalist id="list">                      <!-- Выборвариантов заполнения поля из выпадающего сыписка -->
+   <option value="Вариант_1"></option>
+   <option value="Вариант_2"></option>
+   <option value="Вариант_3"></option>
+</datalist>
+
+
+<meter value="0" max="100" low="10" high="60"></meter>      <!-- что то типа прогресса -->
+<meter value="20" max="100" low="40" high="60"></meter>
+<meter value="50" max="100" low="10" high="60"></meter>
+<meter value="100" max="100"></meter>
+
+
+<progress value="30" max="100"></progress>      <!-- прогресс бар -->
+
+
+<noscript>Это покажет если скрипты отключены</noscript>
+
+
+<mark>Цветное выделение текста</mark>
