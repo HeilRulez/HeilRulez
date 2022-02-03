@@ -24,6 +24,9 @@ https://proglib.io/p/study_html_forms
 <input type="color">   <!-- для интерфейса выбора цвета.
                         В разных браузерах может отображаться по-разному. -->
 
+<input type="search">   <!-- поисковой запрос -->
+
+<input type="hidden" value="Данные">    <!-- скрытое поле для передачи данных без изменения -->
 
 <input type="range" min="10" max="20" step="2">   <!-- создает "ползунок", который можно двигать 
                                                    от максимального до минимального значения.-->
@@ -66,12 +69,43 @@ https://proglib.io/p/study_html_forms
 
 <!-- Другие теги -->
 
-<textarea></textarea>   <!-- Текстовое поле -->
+<textarea>   <!-- Текстовое поле -->
+  <!--  Атрибуты
+    autofocus   - в фокусе при загрузки
+    disabled    - не активное поле, не доступное
+    readonly    - активное но недоступно для редактирования
+    placeholder="подпись"   - полу-прозрачная подпись до ввода
+    maxlength="5"           - максимальное число символов
+    required                - обязательное к заполнению
+  -->
+</textarea>
+
+
+<!-- Выпадающий список с пунктами -->
+
+<select multiple>    <!-- атрибут для множественного выбора-->
+  <optgroup label="Подпись">  <!--группировка вариантов с подписью-->
+    <option disabled></option>
+    <option selected></option>
+    <option></option>
+  </optgroup>
+</select>
 
 <select>
-  <option></option>   <!-- Выпадающий список с пунктами -->
+  <optgroup label="Подпись"></optgroup>
 </select>
 
 <label for="First-name">Имя</label>
 <input type="text" id="First-name">   <!-- Связывание ярлыка. Либо, помещать внутрь. -->
 
+<fieldset>          <!-- визуальное группирование формы рамкой с надписью -->
+  <legend>Тут подпись группы</legend>
+</fieldset>
+
+
+<input list="list">
+<datalist id="list">                      <!-- Выборвариантов заполнения поля из выпадающего сыписка -->
+   <option value="Вариант_1"></option>
+   <option value="Вариант_2"></option>
+   <option value="Вариант_3"></option>
+</datalist>
