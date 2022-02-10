@@ -328,6 +328,9 @@ width: clamp(200px, 50%, 700px)          /*задаёт значение в ди
 
 .root {
     display: grid;   display: inline-grid;                       /* Указать родителю */
+
+    grid: 1fr / auto-flow dense 2fr;                /* ШОРТКАТ Совмещает row, columns, areas, auto-rows, auto-columns, auto-flow */
+
     grid-template-columns: 100px 1fr 50%;       /* три колонки */
     grid-template-rows: repeat(3, 3fr) 100px;           /* три одинаковых строки и одна с фиксированным размером */
     grid-template-rows: repeat(3, 3fr 100px);           /* будут чередоваться размеры */
@@ -336,7 +339,13 @@ width: clamp(200px, 50%, 700px)          /*задаёт значение в ди
     "header header ."
     "main . main"                                       /* точка - пустое пространство. Все клетки должны быть указаны */
     "footer sidebar";
-    gap: 20px 10px;                                /* растояние между строк и столбцов. Один параметр - для обоих */
+    gap: 20px 10px;                                /* растояние между строк и столбцов. Один параметр - для обоих, можно по раздельности с row-gap  column-gap */
+
+    grid-template: 1rf / 1fr;           /* шорткат row / columns */
+    grid-template: 
+        [row1-start] "header header header" 25px [row1-end]         /* шорткат с названием линий, схемой areas, размером строк. После / колонки */
+        [row2-start] "footer footer footer" 25px [row2-end]
+        / auto 50px auto;
     
     grid-auto-columns: 100px;               /* применяеися с grid-auto-flow: column */
     grid-auto-rows: 100px 200px;                /* устанавливает размеры для автомотически добовляемых строк для невлезших элементов. Неяврые треки */
@@ -351,15 +360,20 @@ width: clamp(200px, 50%, 700px)          /*задаёт значение в ди
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  /* будет добавлять колонки что бы заполнить всё пространство. При этом minmax устанавливает границы */
     grid-template-columns: repeat(auto-fit, 100px);         /* будет создавать колонки с размером, но те что без контента сзлопнутся в нулевой размер */
 
+
     justify-items: stretch;             /* | start | end | center;   выравнивает элементы по горизонтали */
     justify-content: stretch;       /* | start | end | center | space-around | space-between | space-evenly   выравнивает всю сетку по горизонтали */
     justify-self: start;                /* личное положение по горизонтали*/
     align-items: stretch;             /* | start | end | center;   выравнивает элементы по вертикали */
     align-content: stretch;       /* | start | end | center | space-around | space-between | space-evenly   выравнивает всю сетку по вертикали */
     align-self: start;                   /* личное положение по вертикали*/
+
+    place-items: start / start;         /* шорткат для align-items / justify-items */
+    place-self: end / end;          /* одно значение будет для обоих. Например - center */
 }
 .header {
     grid-area: header;              /* этот будет размещён по имени при разметке через areas */
+    grid-area: 1 / 1 / 2 / 2;       /* шорткат row-start / column-start / row-end / column-end */
 }
 * {
     grid-column-start: 1;           /* задание линии начала трека */
@@ -406,3 +420,4 @@ width: clamp(200px, 50%, 700px)          /*задаёт значение в ди
 @media screen and (max-width: 568px) and (max-height: 320px) {
     /* landscape ориетнация */
 } 
+
