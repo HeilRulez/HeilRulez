@@ -47,6 +47,21 @@
   color: white;
 }
 
+.svg-animation {
+  animation: color-animation 1s infinite alternate;
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes color-animation {
+  from{
+    fill: red;
+  }
+  to {
+    fill: blue;
+  }
+}
+
 .hr {
   color: #9d8680;
 }
