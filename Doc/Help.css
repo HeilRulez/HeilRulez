@@ -323,7 +323,7 @@ a:hover {
         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
         <path d="M16 9.226l-8-6.21-8 6.21v-2.532l8-6.21 8 6.21zM14 9v6h-4v-4h-4v4h-4v-6l6-4.5z"></path>
     </svg>
-<.html>
+</html>
 
 .svg-animation {
     animation: color-animation 3s infinite alternate;
@@ -383,7 +383,7 @@ width: clamp(200px, 50%, 700px)          /*задаёт значение в ди
     grid-template-columns: fit-content(100px);                  /* установит максимальный размер колонки */
 
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  /* будет добавлять колонки что бы заполнить всё пространство. При этом minmax устанавливает границы */
-    grid-template-columns: repeat(auto-fit, 100px);         /* будет создавать колонки с размером, но те что без контента сзлопнутся в нулевой размер */
+    grid-template-columns: repeat(auto-fit, 100px);         /* будет создавать колонки с размером, но те что без контента слопнутся в нулевой размер */
 
 
     justify-items: stretch;             /* | start | end | center;   выравнивает элементы по горизонтали */
