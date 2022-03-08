@@ -47,6 +47,7 @@ timer();                    // Получение результата
 console.log("This is text");
 console.warn("This is a warning!");
 console.error("This is an error!");
+console.dir(document.body);     // отобразит список свойств и методов переданного объекта
 
 
 //_______________________________________________________________________________
@@ -76,6 +77,13 @@ element.id || element.class     // короткая запись только д
 
 element.setAttribute("src", "https:\\"); // запись атрибута
 element.className = "" // короткий вариант. Производит ПЕРЕЗАПИСЬ
+
+// Проверка значения
+
+element.hasAttribute('disabled')  // вернёт true если есть заданный атрибут
+
+element.removeAttribute('disabled')   // удаление атрибута
+
 
 element.textContent = "" // метод установки текста контента. 
 // Установка CSS прямо в тег, типа element.style.backgroundColor = "".
@@ -420,3 +428,18 @@ let clone = Object.assign({}, user);
 // Example_3    Глубокое копирование
 // Библиотека lodash
 //  Метод _.cloneDeep(obj)
+
+
+// ______________________ Добавление в DOM, теги и тексты ________________________
+
+element.innerHTML = '<div class=""></div>';     // добавляет разметку в родитель. Перезаписывает. Можно +=
+element.innerText = 'этот метод не увидит скрытый текст в разметке';        // лучьше не использовать
+element.textContent = 'текст';      //  добавление текста
+
+element.insertAdjacentHTML('beforeend', '<div></div>');    // в отличии от inner не перерендорит DOM и не 
+                                                           // затрёт добавленное элементам через js
+
+                                                          // beforeend - вставка перед закрывающим тегом содержащего элемента; 
+                                                          // beforebegin - до открывающего тега; afterbegin - после 
+                                                          // открывающего тега; afterend - после закрывающего тега
+element.insertAdjacentText = '';
