@@ -37,6 +37,7 @@
     font-family: "Wat's up";       /* Имя шрифта */
     font-style: italic;        /* Разные начартания задаются новой дикларацией */
     font-weight: bold;
+    font-display: auto;        /* fallback, optional. Варианты как и какой шрифт загрузится */
 }
 
 /* Форматы шрифтов для современных браузеров woff и woff2 */
