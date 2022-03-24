@@ -151,6 +151,14 @@ element.parentNode.removeChild(element); // что бы не искать род
 // или просто 
 element.remove();
 
+//_______________________________ Добавление элементов______________________
+
+node.append(...nodes or strings) — добавляет узлы или строки в конец node;
+node.prepend(...nodes or strings) — в начало node;
+node.before(...nodes or strings) — до node;
+node.after(...nodes or strings) — после node;
+node.replaceWith(...nodes or strings) — заменяет node заданными узлами или строками.
+
 // Клонирование элементов
 
 let parentElement = document.querySelector("body"); // кому припаяем клонированого потомка
