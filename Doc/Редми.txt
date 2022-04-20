@@ -42,3 +42,6 @@ document.designMode = 'on'      набрав вконсоле dev tools можн
 специальное название для неё — gh-pages. Сайт будет виден по тому же адресу:
 https://heilrulez.github.io/how-to-learn/index.html
 Новую ветку нужно указать в настройках «Гитхаба» в разделе ”Source“.
+
+
+В VSCode можно отключить все подсказки сразу: "editor.parameterHints": false
