@@ -1,0 +1,35 @@
+npm init        - создаст  package.json для проекта (npm init --yes создаст с пустыми полями)
+
+npm i webpack --save-dev        - добавит в проект нужное для сборки
+
+npm i webpack-cli --save-dev        - чтобы взаимодействовать с этими параметрами для настройки webpack-а прямо из терминала
+
+"scripts": {
+  "build": "rimraf dist && webpack"        - для сборки. Мульти платформное удаление папки dist перед сборкой
+} 
+
+создайте в папке своего проекта директорию src, а в ней — файл index.js (точка входа)
+
+npm i webpack-dev-server --save-dev     - локальный сервер
+
+"scripts": {
+  "build": "rm -rf dist && webpack --mode production",      - сборка для финальной подготовки файлов к публикации
+  "dev": "webpack serve"                                    - сборка для разработки
+} 
+
+Ctrl + C        - Завершить выполнение локального сервера
+
+///////////////////////////////////////////
+
+npm i @babel/core --save-dev    - Установка Babel
+
+npm i @babel/preset-env --save-dev    - набор правил, по которым переводить код
+
+npm i core-js --save            - загрузить недостающую функциональность в браузер пользователя (полифил)
+
+npm i babel-loader --save-dev   - позволяет подключить Babel к Webpack
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+npm i html-webpack-plugin --save-dev      - html
