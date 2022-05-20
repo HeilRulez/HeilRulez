@@ -33,3 +33,27 @@ npm i babel-loader --save-dev   - позволяет подключить Babel 
 
 
 npm i html-webpack-plugin --save-dev      - html
+
+
+//////////////////////////////////////////////
+
+npm i clean-webpack-plugin --save-dev       -  плагин, который будет каждый раз при сборке проекта удалять содержимое папки
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Яндекс репозиторий npm
+
+npm set registry https://npm.prakticum-team.ru    - установить репозиторий Яндекс.Практикума в качестве источника пакетов
+
+npm login       - cohort-42
+
+Username: (Гуляев Серёжа) cohort-42
+Password:       - wxt8pNanA373zFmSNWGxJLKE6yG6mtuW
+Email: (this IS public) cohort-42@ya.ru         - хз что за мыло
+Logged in as cohort-42 on https://npm.prakticum-team.ru/.     - В случае успеха в терминале будет выведено
+
+
+npm set registry https://registry.npmjs.org/      - переключиться на основной репозиторий npm. к примеру, потребуется установить версии пакетов, которые отсутствуют в репозитории Практикума
+
+
