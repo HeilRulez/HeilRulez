@@ -74,3 +74,10 @@ scripts: {
    "predeploy": "npm run build",
    "deploy": "gh-pages -d dist"
  }
+
+ // Если при этом возникла ошибка:
+ Couldn't find remote ref refs/heads/gh-pages
+  
+  npx gh-pages-clean
+
+  // и npm run build заново.
