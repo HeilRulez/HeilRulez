@@ -57,3 +57,20 @@ Logged in as cohort-42 on https://npm.prakticum-team.ru/.     - В случае 
 npm set registry https://registry.npmjs.org/      - переключиться на основной репозиторий npm. к примеру, потребуется установить версии пакетов, которые отсутствуют в репозитории Практикума
 
 
+//////////////////////////////////////////////////////
+
+Deploy
+
+Через автоматизорованеи - https://www.npmjs.com/package/gh-pages
+
+npm install gh-pages --save-dev
+
+// Добавьте в package.json новый скрипт — deploy
+
+// "predeploy" - Сборка перед деплоем
+
+scripts: {
+   ...
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist"
+ }
